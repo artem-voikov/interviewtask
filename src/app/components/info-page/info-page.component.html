@@ -1,0 +1,17 @@
+<p>
+  info-page works!
+</p>
+
+<div>
+  <label for="ddlcountry">country</label>
+  <select name="" id="ddlcountry">
+      <option *ngFor="let i of countries" value="i">{{i}}</option>
+  </select>
+
+  <label for="ddlrmcs"></label>
+  <select name="" id="ddlrmcs">
+      <option *ngFor="let i of rmcs" value="i">{{i}}</option>
+  </select>
+</div>
+
+<app-info></app-info>
