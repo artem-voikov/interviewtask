@@ -4,13 +4,15 @@
 
 <div>
   <label for="ddlcountry">country</label>
-  <select name="" id="ddlcountry">
-      <option *ngFor="let i of countries" value="i">{{i}}</option>
+  <select name="" id="ddlcountry" [(ngModel)]="country" #c (change)="filter()" #ddlcountry>
+      <option value=""></option>
+      <option *ngFor="let i of countries" value="{{i}}">{{i}}</option>
   </select>
 
-  <label for="ddlrmcs"></label>
-  <select name="" id="ddlrmcs">
-      <option *ngFor="let i of rmcs" value="i">{{i}}</option>
+  <label for="ddlrmcs">rmc</label>
+  <select name="" id="ddlrmcs" [(ngModel)]="rmc" (change)="filter()" #ddlrmcs>
+      <option value=""></option>
+      <option *ngFor="let i of rmcs" value="{{i}}">{{i}}</option>
   </select>
 </div>
 

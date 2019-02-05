@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { StateService } from '../../services/state.service';
-import { stat } from 'fs';
 import { Item } from '../../infrastructure/Item';
 
 @Component({

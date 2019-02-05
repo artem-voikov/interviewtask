@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { SourceService } from '../../services/source.service';
 import { StateService } from '../../services/state.service';
 import { Page } from '../../infrastructure/Page';
@@ -13,6 +13,12 @@ export class InfoPageComponent implements OnInit {
   countries: string[];
   rmcs: string[];
 
+  country: string;
+  rmc: string;
+
+  @ViewChild('ddlcountry') ddlcountry: HTMLSelectElement;
+  @ViewChild('ddlrmcs') ddlrmcs: HTMLSelectElement;
+
   constructor(private source: SourceService, private state: StateService) { }
 
   ngOnInit() {
@@ -24,4 +30,8 @@ export class InfoPageComponent implements OnInit {
     this.rmcs = Array.from(new Set(x.map(y => y.rmc)).values());
   }
 
+  filter(d) {
+    const result = [this.country, this.rmc].filter(dd => dd);
+    console.log(result);
+  }
 }
