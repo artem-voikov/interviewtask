@@ -5,9 +5,9 @@
 <table *ngIf="items" >
   <thead>
     <tr>
-      <th>coutnry</th>
-      <th>quantity</th>
-      <th>rmc</th>
+      <th (click)='sortBy("country");'>coutnry</th>
+      <th (click)='sortBy("quantity");'>quantity</th>
+      <th (click)='sortBy("dd")'>rmc</th>
     </tr>
   </thead>
   <tbody>

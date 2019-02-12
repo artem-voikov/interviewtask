@@ -4,7 +4,7 @@
 
 <div>
   <label for="ddlcountry">country</label>
-  <select name="" id="ddlcountry" [(ngModel)]="country" #c (change)="filter()" #ddlcountry>
+  <select name="" id="ddlcountry" [(ngModel)]="country" (change)="filter()" #ddlcountry>
       <option value=""></option>
       <option *ngFor="let i of countries" value="{{i}}">{{i}}</option>
   </select>
@@ -16,4 +16,4 @@
   </select>
 </div>
 
-<app-info></app-info>
+<app-info ></app-info>
